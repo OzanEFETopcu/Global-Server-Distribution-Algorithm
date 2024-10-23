@@ -21,7 +21,6 @@ class ResourceMonitor:
         self.start_time = time.time()
         while self.is_running:
             current_time = time.time() - self.start_time
-
             # Initialize measurements for this iteration
             total_cpu = 0
             total_memory = 0
@@ -29,7 +28,9 @@ class ResourceMonitor:
             for pid in list(self.process_ids):
                 try:
                     process = psutil.Process(pid)
-                    total_cpu += process.cpu_percent(interval=0.1)
+                    process.cpu_percent()
+                    time.sleep(0.1)
+                    total_cpu += process.cpu_percent()
                     total_memory += process.memory_info().rss / 1024 / 1024  # MB
                 except (psutil.NoSuchProcess, psutil.AccessDenied) as e:
                     print(f"Warning: Could not access process {pid}: {str(e)}")

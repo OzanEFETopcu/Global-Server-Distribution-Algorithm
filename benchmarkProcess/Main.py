@@ -22,9 +22,13 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--process_num', dest='process_num', type=int, help='Define if single or multiple processes will be run and analyzed')
     args = parser.parse_args()
+    #
+    # 100 thousand simulations of a stock with the value of 100
+    # dollars that has 1 percent daily volatility over 5 years
+    #
     simulation_params = {
-        'num_simulations': 1000000,
-        'num_days': 252,
+        'num_simulations': 100000,
+        'num_days': 252*5,
         'initial_price': 100,
         'daily_volatility': 0.01,
         'confidence_level': 0.95
@@ -59,6 +63,7 @@ def main():
 
         # Create a list of identical parameter dictionaries for each process
         params_list = [simulation_params.copy() for _ in range(num_processes)]
+        # params_list = [simulation_params.copy() for _ in range (2)]
         results = pool.map(run_monte_carlo_simulation, params_list)
 
         end_time = time.time()
@@ -79,7 +84,7 @@ def main():
     print(f"\nPerformance Metrics:")
     print(f"Total execution time: {end_time - start_time:.2f} seconds")
     print(f"Average total memory usage: {avg_memory:.1f} MB")
-    print(f"\nCPU Usage Pattern:")
+    print(f"Peak Memory usage: {max(monitor.memory_measurements):.1f} MB")
     print(f"Average total CPU usage: {avg_cpu:.1f}%")
     print(f"Peak CPU usage: {max(monitor.cpu_measurements):.1f}%")
     print(f"Minimum CPU usage: {min(monitor.cpu_measurements):.1f}%")

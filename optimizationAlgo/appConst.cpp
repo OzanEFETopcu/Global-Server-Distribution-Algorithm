@@ -1,4 +1,4 @@
 
-float memoryCoefficient = 2.5;
-float logicalProcessorCoefficient = 1.4;
+float memoryCoefficient = 2.5; // GB
+float logicalProcessorCoefficient = 1.4; // vCPU or Logical Processors
 

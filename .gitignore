@@ -1,0 +1,21 @@
+# Ignore node dependencies, virtual environments, and IDE settings
+node_modules/
+venv/
+.DS_Store
+*.log
+*.env
+*.pyc
+
+# Ignore OS-specific files and editor backups
+Thumbs.db
+*.swp
+*.swo
+
+# Ignore build and cache directories
+__pycache__/
+dist/
+build/
+
+# Ignore sensitive files
+*.pem
+*.key

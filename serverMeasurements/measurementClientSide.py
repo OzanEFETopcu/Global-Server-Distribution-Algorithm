@@ -2,7 +2,7 @@ from datetime import datetime
 import requests
 import time
 
-api_url = "http://13.61.57.56:8000"
+api_url = "http://35.214.5.38:8000"
 
 while True:
     try:

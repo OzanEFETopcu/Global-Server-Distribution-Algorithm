@@ -129,6 +129,9 @@
     "xlocmon": "cpp",
     "xlocnum": "cpp",
     "xloctime": "cpp",
-    "random": "cpp"
+    "random": "cpp",
+    "deque": "cpp",
+    "fstream": "cpp",
+    "queue": "cpp"
   }
 }

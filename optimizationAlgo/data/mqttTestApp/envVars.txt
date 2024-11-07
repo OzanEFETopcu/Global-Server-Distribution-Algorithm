@@ -1,0 +1,9 @@
+MQTT C Libraries:
+/mnt/c/Users/ozane/Downloads/Ongoing Courses/Thesis/Global-Server-Distribution-Algorithm/optimizationAlgo/data/mqttTestApp/paho.mqtt.c/build/src
+/usr/local/lib/libpaho-mqtt3as.so.1
+
+MQTT CPP Libraries:
+/mnt/c/Users/ozane/Downloads/Ongoing Courses/Thesis/Global-Server-Distribution-Algorithm/optimizationAlgo/data/mqttTestApp/paho.mqtt.cpp/build/src
+/mnt/c/Users/ozane/Downloads/Ongoing Courses/Thesis/Global-Server-Distribution-Algorithm/optimizationAlgo/data/mqttTestApp/paho.mqtt.cpp/
+
+export LD_LIBRARY_PATH=/mnt/c/Users/ozane/Downloads/Ongoing\ Courses/Thesis/Global-Server-Distribution-Algorithm/optimizationAlgo/data/mqttTestApp/paho.mqtt.c/build/src:/usr/local/lib/libpaho-mqtt3as.so.1:/mnt/c/Users/ozane/Downloads/Ongoing\ Courses/Thesis/Global-Server-Distribution-Algorithm/optimizationAlgo/data/mqttTestApp/paho.mqtt.cpp/build/src:/mnt/c/Users/ozane/Downloads/Ongoing\ Courses/Thesis/Global-Server-Distribution-Algorithm/optimizationAlgo/data/mqttTestApp/paho.mqtt.cpp/:${LD_LIBRARY_PATH}

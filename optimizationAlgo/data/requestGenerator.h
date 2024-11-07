@@ -1,6 +1,6 @@
-#ifndef MY_CLASS_H
-#define MY_CLASS_H
+#ifndef MY_CLASS_Ho
+#define MY_CLASS_Ho
 
-void simulateDay();
+void generateRequests();
 
 #endif

@@ -7,7 +7,7 @@ double memoryCoefficient = 2.5; // GB
 double logicalProcessorCoefficient = 1.4; // vCPU or Logical Processors
 double memoryConstant = 3; // GB
 double logicalProcessorConstant = 2.2; // vCPU or Logical Processors
-double averateApplicationExecutionDuration = 2; // minutes
+double averageApplicationExecutionDuration = 2; // minutes
 
 int vCPUReqCalculator(int totalProcessNum){
     double estimateRequirement = logicalProcessorCoefficient * (totalProcessNum - 1) + logicalProcessorConstant;

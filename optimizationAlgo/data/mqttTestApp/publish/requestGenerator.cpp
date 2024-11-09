@@ -13,10 +13,10 @@ void generateRequests(string regionName)
     mt19937 gen(rd());
 
     // Define high and low traffic frequency ranges for random durations
-    uniform_int_distribution<> lowTrafficDis(18000, 36000); // 18000-36000 ms
-    uniform_int_distribution<> highTrafficDis(1500, 3000);  // 1500-3000 ms
+    uniform_int_distribution<> lowTrafficDis(1000, 2000); // In real life between 3.3 minute to 6.6 minutes a request
+    uniform_int_distribution<> highTrafficDis(100, 200);  // In real life between 0.33 minute to 0.66 minutes a request
 
-    auto client = initiateClient("publish_" + regionName);
+    auto client = initiatePubClient("publish_" + regionName);
     // Initialize an empty message with specified topic.
     mqtt::message_ptr timeLeftMessagePointer = mqtt::make_message(regionName, "");
 

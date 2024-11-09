@@ -1,11 +1,7 @@
-#include <iostream>
-#include <random>
 #include <mqtt/client.h>
-#include <chrono>
-#include <thread>
 using namespace std;
 
-unique_ptr<mqtt::client> initiateClient(const string &id)
+unique_ptr<mqtt::client> initiatePubClient(const string &id)
 {
     // In order to connect the mqtt client to a broker,
     // Define an Ip address pointing to a broker. In this case, the localhost on port 1883.

@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "cwd": "c:/Users/ozane/Downloads/Ongoing Courses/Thesis/Global-Server-Distribution-Algorithm/optimizationAlgo/data/mqttTestApp/publish",
+      "program": "c:/Users/ozane/Downloads/Ongoing Courses/Thesis/Global-Server-Distribution-Algorithm/optimizationAlgo/data/mqttTestApp/publish/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -13,8 +13,8 @@ void generateRequests(string regionName)
     mt19937 gen(rd());
 
     // Define high and low traffic frequency ranges for random durations
-    uniform_int_distribution<> lowTrafficDis(1000, 2000); // In real life between 3.3 minute to 6.6 minutes a request
-    uniform_int_distribution<> highTrafficDis(100, 200);  // In real life between 0.33 minute to 0.66 minutes a request
+    uniform_int_distribution<> lowTrafficDis(10000, 20000); // In real life between 33 minute to 66 minutes a request
+    uniform_int_distribution<> highTrafficDis(1000, 2000);  // In real life between 3.3 minute to 6.6 minutes a request
 
     auto client = initiatePubClient("publish_" + regionName);
     // Initialize an empty message with specified topic.

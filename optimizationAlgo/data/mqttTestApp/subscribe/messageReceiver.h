@@ -3,6 +3,7 @@
 #include <string>
 #include <thread>
 #include <vector>
+#include <fstream>
 #include <functional>
 #include <mutex>
 using namespace std;
@@ -31,6 +32,7 @@ public:
     void removeProcess(std::shared_ptr<Process> completedProcess);
     void changeStatus();
     int getTotalProcessNum();
+    string getInstanceType();
     int serverStatus;
 
 private:
@@ -51,7 +53,11 @@ public:
     void removeServer();
     void changeServerType(std::shared_ptr<Server> serverToChange, int requestedType);
 
+    // Monitoring of algorithm changes
+    void regionalReport();
+
 private:
+    std::shared_ptr<std::ofstream> file_ptr;
     std::mutex serversMutex;
     // Servers that have # of processes between min and max thresholds
     vector<std::shared_ptr<Server>> serverStatus0;

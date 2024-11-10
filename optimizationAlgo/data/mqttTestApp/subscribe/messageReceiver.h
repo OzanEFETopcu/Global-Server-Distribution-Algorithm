@@ -4,12 +4,14 @@
 #include <thread>
 #include <vector>
 #include <functional>
+#include <mutex>
 using namespace std;
 
 class Process : public std::enable_shared_from_this<Process>
 {
 public:
     Process(int executionTimeInput, function<void(std::shared_ptr<Process>)> onComplete);
+    ~Process();
     void start();
     void run();
     thread processThread;
@@ -17,9 +19,9 @@ public:
 private:
     int executionTime;
     function<void(std::shared_ptr<Process> completedProces)> onCompleteCallback;
+    std::mutex mutex_;
+    std::mutex callbackMutex;
 };
-
-
 
 class Server : public std::enable_shared_from_this<Server>
 {
@@ -30,10 +32,10 @@ public:
     int getTotalProcessNum();
 
 private:
+    std::mutex processesMutex;
     string instanceType;
     vector<std::shared_ptr<Process>> activeProcesses;
 };
-
 
 class RegionalAlgo
 {
@@ -46,6 +48,7 @@ public:
     void removeServer();
 
 private:
+    std::mutex serversMutex;
     // Servers that have # of processes between min and max thresholds
     vector<std::shared_ptr<Server>> serverType0;
     // Servers that have # of processes smaller than the min threshold
@@ -55,7 +58,5 @@ private:
     // Servers that have maximum possible # of processes
     vector<std::shared_ptr<Server>> serverType3;
 };
-
-
 
 #endif

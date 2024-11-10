@@ -3,16 +3,19 @@
 #include <thread>  // threads.
 #include <functional>
 #include <future>
+#include <mutex>
 #include "mqttSubscribeMessage.h"
 #include "messageReceiver.h"
+#include "appConst.h"
 using namespace std;
+using namespace Constants;
 
 //////////////////
 // Regional algorithm class implementation
 RegionalAlgo::RegionalAlgo(string regionNameInput)
 {
     regionName = regionNameInput;
-}
+};
 
 // Continuously listening to requests coming from outside and handling the requests
 void RegionalAlgo::messageReceiver()
@@ -31,7 +34,6 @@ void RegionalAlgo::messageReceiver()
         // allowing control to enter the if-statement body.
         if (client->try_consume_message(&messagePointer))
         {
-            cout << "Hello Mate!!\n";
             // Construct a string from the message payload.
             string messageString = messagePointer->get_payload_str();
             // Print payload string to console (debugging).
@@ -53,38 +55,61 @@ void RegionalAlgo::messageReceiver()
 // As the requests come in adding the processes to servers
 void RegionalAlgo::addProcessToServer()
 {
-    if (serverType0.size() > 0)
+    // First, get the appropriate server under a smaller lock scope
+    std::shared_ptr<Server> targetServer;
     {
-        serverType0.front()->launchProcess(60);
-    }
-    else if (serverType1.size() > 0)
+        std::lock_guard<std::mutex> lock(serversMutex);
+
+        if (serverType0.size() > 0)
+        {
+            targetServer = serverType0.front();
+        }
+        else if (serverType1.size() > 0)
+        {
+            targetServer = serverType1.front();
+        }
+        else if (serverType2.size() > 0)
+        {
+            targetServer = serverType2.front();
+        }
+        else
+        {
+            // Need to add a new server
+            auto newServer = std::make_shared<Server>("c4");
+            serverType1.push_back(newServer);
+            targetServer = newServer;
+        }
+    } // serversMutex is released here
+
+    // Now launch the process on the selected server
+    if (targetServer)
     {
-        serverType1.front()->launchProcess(60);
-        cout << to_string(serverType1.size()) << endl;
-        cout << to_string(serverType1.front()->getTotalProcessNum()) << endl;
-    }
-    else if (serverType2.size() > 0)
-    {
-        serverType2.front()->launchProcess(60);
-    }
-    else
-    {
-        addServer("c4");
-        // Since the only server is in serverType1 the first value of the vector is our server
-        serverType1.front()->launchProcess(60);
+        targetServer->launchProcess(Constants::averageApplicationExecutionDuration);
+        cout << "Process launched successfully!\n\n";
+        cout << "Infrastructure update:\n";
+        cout << "---------------------------\n";
+        cout << "Server Type 0 Amount: " << serverType0.size() << endl;
+        cout << "Server Type 1 Amount: " << serverType1.size() << endl;
+        cout << "Server Type 2 Amount: " << serverType2.size() << endl;
+        cout << "Server Type 3 Amount: " << serverType3.size() << endl;
+        cout << "---------------------------\n";
+        cout << "Server Type 1 Process Num: " << serverType1.front()->getTotalProcessNum() << endl;
+        cout << "---------------------------\n\n\n\n";
     }
 }
 
 // Adding a new server to the server pool of serverType1 since there is no processes in that server
 void RegionalAlgo::addServer(string instanceTypeInput)
 {
-    std::shared_ptr<Server> server = std::make_shared<Server>(instanceTypeInput);
+    std::lock_guard<std::mutex> lock(serversMutex);
+    auto server = std::make_shared<Server>(instanceTypeInput);
     serverType1.push_back(server);
 };
 
 // Removing servers that are no more used
 void RegionalAlgo::removeServer()
 {
+    std::lock_guard<std::mutex> lock(serversMutex);
     // Remove servers with no active processes from the serverType1 vector
     serverType1.erase(
         std::remove_if(serverType1.begin(), serverType1.end(),
@@ -104,6 +129,23 @@ Process::Process(int executionTimeInput, function<void(std::shared_ptr<Process>)
     start();
 };
 
+Process::~Process()
+{
+    if (processThread.joinable())
+    {
+        if (processThread.get_id() == std::this_thread::get_id())
+        {
+            // Avoid joining the thread if it's the same as the current thread
+            processThread.detach();
+        }
+        else
+        {
+            processThread.join();
+        }
+    }
+    cout << "Flag7\n";
+}
+
 // Create a seperate thread that will simulate a running application
 void Process::start()
 {
@@ -115,10 +157,19 @@ void Process::run()
 {
     std::this_thread::sleep_for(std::chrono::seconds(executionTime));
 
-    // Notify that this process is complete
-    if (onCompleteCallback)
+    std::function<void(std::shared_ptr<Process>)> callback;
     {
-        onCompleteCallback(shared_from_this());
+        std::lock_guard<std::mutex> lock(callbackMutex);
+        if (onCompleteCallback)
+        {
+            callback = onCompleteCallback; // Make a local copy
+        }
+    }
+
+    if (callback)
+    {
+        auto self = shared_from_this(); // Keep Process alive during callback
+        callback(self);                 // Use the local copy
     }
 }
 
@@ -127,32 +178,34 @@ void Process::run()
 Server::Server(string instanceTypeInput)
 {
     instanceType = instanceTypeInput;
-}
+};
 
 // Adds new processes to the server
 void Server::launchProcess(int executionTime)
 {
+    std::lock_guard<std::mutex> lock(processesMutex);
     std::shared_ptr<Process> newProcess = std::make_shared<Process>(executionTime, [this](std::shared_ptr<Process> completedProcess)
-                                                                    { this->removeProcess(completedProcess); });
+                                                                    { removeProcess(completedProcess); });
     activeProcesses.push_back(newProcess);
 }
 
 // Removing processes that are executed (This is used as a callback and given to Process class to handle its own lifecycle)
 void Server::removeProcess(std::shared_ptr<Process> completedProcess)
 {
+    cout << "Flag3\n";
+    // Then remove from active processes
+    std::lock_guard<std::mutex> lock(processesMutex);
     auto it = std::find(activeProcesses.begin(), activeProcesses.end(), completedProcess);
     if (it != activeProcesses.end())
     {
         activeProcesses.erase(it);
-        if (completedProcess->processThread.joinable())
-        {
-            completedProcess->processThread.join(); // Join the thread here
-        }
     }
+    cout << "Process removed successfully\n";
 }
 
 // Returning the total amount of processes runnning simultaniously
 int Server::getTotalProcessNum()
 {
+    std::lock_guard<std::mutex> lock(processesMutex);
     return activeProcesses.size();
 }

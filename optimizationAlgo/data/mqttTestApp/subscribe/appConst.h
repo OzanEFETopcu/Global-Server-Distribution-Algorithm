@@ -4,6 +4,7 @@
 
 #include <map>
 #include <string>
+#include <optional>
 #include <cmath> // For std::ceil
 
 // Namespace to encapsulate the constants and functions, avoiding polluting the global namespace.
@@ -84,12 +85,29 @@ struct Capacity {
 
 // Server process capacities per type
 inline const std::map<std::string, Capacity> processCapacityPerInstanceType = {
-    {"c8", {2, 3, 5}},
+    {"c08", {2, 3, 5}},
     {"c16", {3, 7, 10}},
     {"c32", {5, 19, 22}},
     {"c52", {15, 33, 36}},
     {"c88", {28, 58, 62}}
 };
+
+// Returns the next larger instance type, or nullopt if already at largest
+std::optional<std::string> getNextInstanceType(const std::string& currentType) {
+    // Find current type in map
+    auto currentIt = processCapacityPerInstanceType.find(currentType);
+    if (currentIt == processCapacityPerInstanceType.end()) {
+        return std::nullopt;  // Current type not found
+    }
+
+    // Try to get next element
+    auto nextIt = std::next(currentIt);
+    if (nextIt == processCapacityPerInstanceType.end()) {
+        return std::nullopt;  // Already at largest instance type
+    }
+
+    return nextIt->first;  // Return the next instance type
+}
 
 } // namespace Constants
 

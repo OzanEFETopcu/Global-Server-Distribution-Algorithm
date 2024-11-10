@@ -18,15 +18,16 @@ int main()
 
 
     // Launch a thread for each region
-    /*for (auto& region : regions) {
-        threads.emplace_back([&region]() { region.messageReceiver(); });  // Pass the region name to each thread
-    }*/
-    regions[0]->messageReceiver();
+    for (auto& region : regions) {
+        threads.emplace_back([&region]() { region->messageReceiver(); });  // Pass the region name to each thread
+    }
+    //regions[0]->messageReceiver();
 
     // Wait for all threads to finish
-    /*for (auto& t : threads) {
+    for (auto& t : threads) {
         t.join();
-    }*/
+    }
+
 
     return 0;
 

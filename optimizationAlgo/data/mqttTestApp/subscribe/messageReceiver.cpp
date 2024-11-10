@@ -1,4 +1,5 @@
 #include <ostream> // std::cout.
+#include <fstream> // std::ofstream.
 #include <vector>  // vectors.
 #include <thread>  // threads.
 #include <functional>
@@ -15,6 +16,7 @@ using namespace Constants;
 RegionalAlgo::RegionalAlgo(string regionNameInput)
 {
     regionName = regionNameInput;
+    file_ptr = std::make_shared<std::ofstream>(regionName + "_log", std::ios::app);
 };
 
 // Continuously listening to requests coming from outside and handling the requests
@@ -37,6 +39,7 @@ void RegionalAlgo::messageReceiver()
             // Construct a string from the message payload.
             string messageString = messagePointer->get_payload_str();
             // Print payload string to console (debugging).
+
             std::future<void> ft = std::async(std::launch::async, [this]()
                                               { addProcessToServer(); });
 
@@ -75,9 +78,9 @@ void RegionalAlgo::addProcessToServer()
         else
         {
             // Need to add a new server
-            auto newServer = std::make_shared<Server>("c8", [this](std::shared_ptr<Server> serverToChange, int requestedStatus)
+            auto newServer = std::make_shared<Server>("c08", [this](std::shared_ptr<Server> serverToChange, int requestedStatus)
                                                       { changeServerType(serverToChange, requestedStatus); });
-            serverStatus1.push_back(newServer);
+            serverStatus1.insert(serverStatus1.begin(), newServer);
             targetServer = newServer;
         }
     } // serversMutex is released here
@@ -86,41 +89,18 @@ void RegionalAlgo::addProcessToServer()
     if (targetServer)
     {
         targetServer->launchProcess(Constants::averageApplicationExecutionDuration);
-        cout << "Process launched successfully!\n\n";
-        cout << "Infrastructure update:\n";
-        cout << "---------------------------\n";
-        cout << "Server Type 0 Amount: " << serverStatus0.size() << endl;
-        cout << "Server Type 1 Amount: " << serverStatus1.size() << endl;
-        cout << "Server Type 2 Amount: " << serverStatus2.size() << endl;
-        cout << "Server Type 3 Amount: " << serverStatus3.size() << endl;
-        cout << "---------------------------\n";
-        if (!serverStatus0.empty())
-        {
-            cout << "Server Type 0 Process Num: " << serverStatus0.front()->getTotalProcessNum() << endl;
-        }
-        if (!serverStatus1.empty())
-        {
-            cout << "Server Type 1 Process Num: " << serverStatus1.front()->getTotalProcessNum() << endl;
-        }
-        if (!serverStatus2.empty())
-        {
-            cout << "Server Type 2 Process Num: " << serverStatus2.front()->getTotalProcessNum() << endl;
-        }
-        if (!serverStatus3.empty())
-        {
-            cout << "Server Type 3 Process Num: " << serverStatus3.front()->getTotalProcessNum() << endl;
-        }
-        cout << "---------------------------\n\n\n\n";
+        cout << "PROCESS ADDED\n";
+        // Print out the current server load of the region
+        regionalReport();
     }
 }
 
 // Adding a new server to the server pool of serverType1 since there is no processes in that server
 void RegionalAlgo::addServer(string instanceTypeInput)
 {
-    std::lock_guard<std::mutex> lock(serversMutex);
     auto server = std::make_shared<Server>(instanceTypeInput, [this](std::shared_ptr<Server> serverToChange, int requestedStatus)
                                            { changeServerType(serverToChange, requestedStatus); });
-    serverStatus1.push_back(server);
+    serverStatus1.insert(serverStatus1.begin(), server);
 };
 
 // Removing servers that are no more used
@@ -161,37 +141,124 @@ void RegionalAlgo::changeServerType(std::shared_ptr<Server> serverToChange, int 
             removeServerFromVector(serverStatus1);
             removeServerFromVector(serverStatus2);
             removeServerFromVector(serverStatus3);
+            cout << "SERVER CLOSED\n";
+            regionalReport();
         }
         if (requestedStatus == 0)
         {
-            serverStatus0.push_back(serverToChange);
+            serverStatus0.insert(serverStatus0.begin(), serverToChange);
             removeServerFromVector(serverStatus1);
             removeServerFromVector(serverStatus2);
             removeServerFromVector(serverStatus3);
         }
         else if (requestedStatus == 1)
         {
-            serverStatus1.push_back(serverToChange);
+            serverStatus1.insert(serverStatus1.begin(), serverToChange);
             removeServerFromVector(serverStatus0);
             removeServerFromVector(serverStatus2);
             removeServerFromVector(serverStatus3);
         }
         else if (requestedStatus == 2)
         {
-            serverStatus2.push_back(serverToChange);
+            serverStatus2.insert(serverStatus2.begin(), serverToChange);
             removeServerFromVector(serverStatus0);
             removeServerFromVector(serverStatus1);
             removeServerFromVector(serverStatus3);
+
+            // If the proccess amount in the server is increasing then create a new server with increased resource configuration (vertical scaling)
+            // and if the server resource is at maximum possible than create an identical server
+            if (serverToChange->serverStatus < requestedStatus && serverStatus1.empty())
+            {
+                auto nextTypeOpt = Constants::getNextInstanceType(serverToChange->getInstanceType());
+                if (nextTypeOpt)
+                {
+                    cout << serverToChange->getInstanceType();
+                    cout << *nextTypeOpt;
+                    // Optional has a value, so use it
+                    addServer(*nextTypeOpt);
+                }
+                else
+                {
+                    addServer(serverToChange->getInstanceType());
+                }
+            }
         }
         else if (requestedStatus == 3)
         {
-            serverStatus3.push_back(serverToChange);
+            serverStatus3.insert(serverStatus3.begin(), serverToChange);
             removeServerFromVector(serverStatus0);
             removeServerFromVector(serverStatus1);
             removeServerFromVector(serverStatus2);
         }
     }
 };
+
+#include <sstream> // Include this for stringstream
+
+void RegionalAlgo::regionalReport()
+{
+    // Use a stringstream to construct the message
+    std::stringstream reportStream;
+
+    // Add to both the reportStream and console output
+    reportStream << "Infrastructure update:\n";
+    reportStream << "---------------------------\n";
+    reportStream << "Total Number of Server Type 0: " << serverStatus0.size() << "\n";
+    reportStream << "Total Number of Server Type 1: " << serverStatus1.size() << "\n";
+    reportStream << "Total Number of Server Type 2: " << serverStatus2.size() << "\n";
+    reportStream << "Total Number of Server Type 3: " << serverStatus3.size() << "\n";
+    reportStream << "---------------------------\n";
+
+    // Print individual server details for each status type
+    if (!serverStatus0.empty())
+    {
+        reportStream << "Individual Server Type 0 Process Numbers:\n";
+        for (const auto& server : serverStatus0)
+        {
+            reportStream << server->getInstanceType() << ":" << server->getTotalProcessNum() << "/";
+        }
+        reportStream << "\n";
+    }
+    if (!serverStatus1.empty())
+    {
+        reportStream << "Individual Server Type 1 Process Numbers:\n";
+        for (const auto& server : serverStatus1)
+        {
+            reportStream << server->getInstanceType() << ":" << server->getTotalProcessNum() << "/";
+        }
+        reportStream << "\n";
+    }
+    if (!serverStatus2.empty())
+    {
+        reportStream << "Individual Server Type 2 Process Numbers:\n";
+        for (const auto& server : serverStatus2)
+        {
+            reportStream << server->getInstanceType() << ":" << server->getTotalProcessNum() << "/";
+        }
+        reportStream << "\n";
+    }
+    if (!serverStatus3.empty())
+    {
+        reportStream << "Individual Server Type 3 Process Numbers:\n";
+        for (const auto& server : serverStatus3)
+        {
+            reportStream << server->getInstanceType() << ":" << server->getTotalProcessNum() << "/";
+        }
+        reportStream << "\n";
+    }
+
+    reportStream << "---------------------------\n\n";
+
+    // Output to console
+    std::cout << reportStream.str();
+
+    // Output to file if it's open
+    if (file_ptr->is_open())
+    {
+        *file_ptr << reportStream.str();
+        file_ptr->flush(); // Ensure the data is written to the file
+    }
+}
 
 //////////////////
 // Process class implementation
@@ -271,7 +338,7 @@ void Server::changeStatus()
     {
         if (serverStatusChangeSignalCallback)
         {
-            auto self = shared_from_this();            // Keep Process alive during callback
+            auto self = shared_from_this();             // Keep Process alive during callback
             serverStatusChangeSignalCallback(self, -1); // Use the local copy
         }
     }
@@ -328,7 +395,7 @@ void Server::removeProcess(std::shared_ptr<Process> completedProcess)
         activeProcesses.erase(it);
     }
     changeStatus();
-    cout << "Process removed successfully\n";
+    cout << "PROCESS REMOVED\n";
 }
 
 // Returning the total amount of processes runnning simultaniously
@@ -336,4 +403,10 @@ int Server::getTotalProcessNum()
 {
     std::lock_guard<std::mutex> lock(processesMutex);
     return activeProcesses.size();
+}
+
+// Return the instance type of the server
+string Server::getInstanceType()
+{
+    return instanceType;
 }

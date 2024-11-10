@@ -60,23 +60,24 @@ void RegionalAlgo::addProcessToServer()
     {
         std::lock_guard<std::mutex> lock(serversMutex);
 
-        if (serverType0.size() > 0)
+        if (serverStatus0.size() > 0)
         {
-            targetServer = serverType0.front();
+            targetServer = serverStatus0.front();
         }
-        else if (serverType1.size() > 0)
+        else if (serverStatus1.size() > 0)
         {
-            targetServer = serverType1.front();
+            targetServer = serverStatus1.front();
         }
-        else if (serverType2.size() > 0)
+        else if (serverStatus2.size() > 0)
         {
-            targetServer = serverType2.front();
+            targetServer = serverStatus2.front();
         }
         else
         {
             // Need to add a new server
-            auto newServer = std::make_shared<Server>("c4");
-            serverType1.push_back(newServer);
+            auto newServer = std::make_shared<Server>("c8", [this](std::shared_ptr<Server> serverToChange, int requestedStatus)
+                                                      { changeServerType(serverToChange, requestedStatus); });
+            serverStatus1.push_back(newServer);
             targetServer = newServer;
         }
     } // serversMutex is released here
@@ -88,12 +89,27 @@ void RegionalAlgo::addProcessToServer()
         cout << "Process launched successfully!\n\n";
         cout << "Infrastructure update:\n";
         cout << "---------------------------\n";
-        cout << "Server Type 0 Amount: " << serverType0.size() << endl;
-        cout << "Server Type 1 Amount: " << serverType1.size() << endl;
-        cout << "Server Type 2 Amount: " << serverType2.size() << endl;
-        cout << "Server Type 3 Amount: " << serverType3.size() << endl;
+        cout << "Server Type 0 Amount: " << serverStatus0.size() << endl;
+        cout << "Server Type 1 Amount: " << serverStatus1.size() << endl;
+        cout << "Server Type 2 Amount: " << serverStatus2.size() << endl;
+        cout << "Server Type 3 Amount: " << serverStatus3.size() << endl;
         cout << "---------------------------\n";
-        cout << "Server Type 1 Process Num: " << serverType1.front()->getTotalProcessNum() << endl;
+        if (!serverStatus0.empty())
+        {
+            cout << "Server Type 0 Process Num: " << serverStatus0.front()->getTotalProcessNum() << endl;
+        }
+        if (!serverStatus1.empty())
+        {
+            cout << "Server Type 1 Process Num: " << serverStatus1.front()->getTotalProcessNum() << endl;
+        }
+        if (!serverStatus2.empty())
+        {
+            cout << "Server Type 2 Process Num: " << serverStatus2.front()->getTotalProcessNum() << endl;
+        }
+        if (!serverStatus3.empty())
+        {
+            cout << "Server Type 3 Process Num: " << serverStatus3.front()->getTotalProcessNum() << endl;
+        }
         cout << "---------------------------\n\n\n\n";
     }
 }
@@ -102,8 +118,9 @@ void RegionalAlgo::addProcessToServer()
 void RegionalAlgo::addServer(string instanceTypeInput)
 {
     std::lock_guard<std::mutex> lock(serversMutex);
-    auto server = std::make_shared<Server>(instanceTypeInput);
-    serverType1.push_back(server);
+    auto server = std::make_shared<Server>(instanceTypeInput, [this](std::shared_ptr<Server> serverToChange, int requestedStatus)
+                                           { changeServerType(serverToChange, requestedStatus); });
+    serverStatus1.push_back(server);
 };
 
 // Removing servers that are no more used
@@ -111,13 +128,69 @@ void RegionalAlgo::removeServer()
 {
     std::lock_guard<std::mutex> lock(serversMutex);
     // Remove servers with no active processes from the serverType1 vector
-    serverType1.erase(
-        std::remove_if(serverType1.begin(), serverType1.end(),
+    serverStatus1.erase(
+        std::remove_if(serverStatus1.begin(), serverStatus1.end(),
                        [](const std::shared_ptr<Server> &server)
                        {
                            return server->getTotalProcessNum() == 0;
                        }),
-        serverType1.end());
+        serverStatus1.end());
+};
+
+// Changing server's vector from one type to another depending on its occupancy
+void RegionalAlgo::changeServerType(std::shared_ptr<Server> serverToChange, int requestedStatus)
+{
+
+    std::lock_guard<std::mutex> lock(serversMutex);
+
+    // Remove server from the original vector it's in
+    auto removeServerFromVector = [&](vector<std::shared_ptr<Server>> &sourceVector)
+    {
+        auto it = std::remove(sourceVector.begin(), sourceVector.end(), serverToChange);
+        if (it != sourceVector.end())
+        {
+            sourceVector.erase(it);
+        }
+    };
+
+    if (serverToChange->serverStatus != requestedStatus)
+    {
+        if (requestedStatus == -1)
+        {
+            removeServerFromVector(serverStatus0);
+            removeServerFromVector(serverStatus1);
+            removeServerFromVector(serverStatus2);
+            removeServerFromVector(serverStatus3);
+        }
+        if (requestedStatus == 0)
+        {
+            serverStatus0.push_back(serverToChange);
+            removeServerFromVector(serverStatus1);
+            removeServerFromVector(serverStatus2);
+            removeServerFromVector(serverStatus3);
+        }
+        else if (requestedStatus == 1)
+        {
+            serverStatus1.push_back(serverToChange);
+            removeServerFromVector(serverStatus0);
+            removeServerFromVector(serverStatus2);
+            removeServerFromVector(serverStatus3);
+        }
+        else if (requestedStatus == 2)
+        {
+            serverStatus2.push_back(serverToChange);
+            removeServerFromVector(serverStatus0);
+            removeServerFromVector(serverStatus1);
+            removeServerFromVector(serverStatus3);
+        }
+        else if (requestedStatus == 3)
+        {
+            serverStatus3.push_back(serverToChange);
+            removeServerFromVector(serverStatus0);
+            removeServerFromVector(serverStatus1);
+            removeServerFromVector(serverStatus2);
+        }
+    }
 };
 
 //////////////////
@@ -143,7 +216,6 @@ Process::~Process()
             processThread.join();
         }
     }
-    cout << "Flag7\n";
 }
 
 // Create a seperate thread that will simulate a running application
@@ -175,9 +247,11 @@ void Process::run()
 
 //////////////////
 // Server class implementation
-Server::Server(string instanceTypeInput)
+Server::Server(string instanceTypeInput, function<void(std::shared_ptr<Server> serverToChange, int requestedStatus)> serverStatusChangeSignal)
 {
+    serverStatusChangeSignalCallback = serverStatusChangeSignal;
     instanceType = instanceTypeInput;
+    serverStatus = 1;
 };
 
 // Adds new processes to the server
@@ -187,12 +261,65 @@ void Server::launchProcess(int executionTime)
     std::shared_ptr<Process> newProcess = std::make_shared<Process>(executionTime, [this](std::shared_ptr<Process> completedProcess)
                                                                     { removeProcess(completedProcess); });
     activeProcesses.push_back(newProcess);
+    changeStatus();
 }
+
+// Send a callback to the algorithm for updating server status according to active process num
+void Server::changeStatus()
+{
+    if (activeProcesses.size() == 0)
+    {
+        if (serverStatusChangeSignalCallback)
+        {
+            auto self = shared_from_this();            // Keep Process alive during callback
+            serverStatusChangeSignalCallback(self, -1); // Use the local copy
+        }
+    }
+    else if (activeProcesses.size() <= Constants::processCapacityPerInstanceType.at(instanceType).minThreshold)
+    {
+        if (serverStatusChangeSignalCallback)
+        {
+            auto self = shared_from_this();            // Keep Process alive during callback
+            serverStatusChangeSignalCallback(self, 1); // Use the local copy
+            serverStatus = 1;
+        }
+    }
+    else if (activeProcesses.size() <= Constants::processCapacityPerInstanceType.at(instanceType).maxThreshold)
+    {
+        if (serverStatusChangeSignalCallback)
+        {
+            auto self = shared_from_this();            // Keep Process alive during callback
+            serverStatusChangeSignalCallback(self, 0); // Use the local copy
+            serverStatus = 0;
+        }
+    }
+    else if (activeProcesses.size() < Constants::processCapacityPerInstanceType.at(instanceType).absoluteLimit)
+    {
+        if (serverStatusChangeSignalCallback)
+        {
+            auto self = shared_from_this();            // Keep Process alive during callback
+            serverStatusChangeSignalCallback(self, 2); // Use the local copy
+            serverStatus = 2;
+        }
+    }
+    else if (activeProcesses.size() == Constants::processCapacityPerInstanceType.at(instanceType).absoluteLimit)
+    {
+        if (serverStatusChangeSignalCallback)
+        {
+            auto self = shared_from_this();            // Keep Process alive during callback
+            serverStatusChangeSignalCallback(self, 3); // Use the local copy
+            serverStatus = 3;
+        }
+    }
+    else
+    {
+        cout << "!!!!ERROR ON SERVER STATUS CHANGE!!!!" << endl;
+    }
+};
 
 // Removing processes that are executed (This is used as a callback and given to Process class to handle its own lifecycle)
 void Server::removeProcess(std::shared_ptr<Process> completedProcess)
 {
-    cout << "Flag3\n";
     // Then remove from active processes
     std::lock_guard<std::mutex> lock(processesMutex);
     auto it = std::find(activeProcesses.begin(), activeProcesses.end(), completedProcess);
@@ -200,6 +327,7 @@ void Server::removeProcess(std::shared_ptr<Process> completedProcess)
     {
         activeProcesses.erase(it);
     }
+    changeStatus();
     cout << "Process removed successfully\n";
 }
 

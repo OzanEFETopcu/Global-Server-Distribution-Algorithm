@@ -32,7 +32,6 @@ inline int memoryReqCalculator(int totalProcessNum) {
 
 // Average regional service pricing in USD
 inline const std::map<std::string, float> oregonServerPricing = {
-    {"c4", 0.1430},
     {"c8", 0.2859},
     {"c16", 0.5719},
     {"c32", 1.1437},
@@ -41,7 +40,6 @@ inline const std::map<std::string, float> oregonServerPricing = {
 };
 
 inline const std::map<std::string, float> londonServerPricing = {
-    {"c4", 0.1774},
     {"c8", 0.3547},
     {"c16", 0.7095},
     {"c32", 1.4190},
@@ -50,7 +48,6 @@ inline const std::map<std::string, float> londonServerPricing = {
 };
 
 inline const std::map<std::string, float> singaporeServerPricing = {
-    {"c4", 0.1706},
     {"c8", 0.3412},
     {"c16", 0.6824},
     {"c32", 1.3648},
@@ -75,6 +72,23 @@ inline const std::map<std::string, float> londonToDest = {
     {"oregon", 320},
     {"singapore", 320},
     {"london", 1},
+};
+
+
+
+struct Capacity {
+    int minThreshold;
+    int maxThreshold;
+    int absoluteLimit;
+};
+
+// Server process capacities per type
+inline const std::map<std::string, Capacity> processCapacityPerInstanceType = {
+    {"c8", {2, 3, 5}},
+    {"c16", {3, 7, 10}},
+    {"c32", {5, 19, 22}},
+    {"c52", {15, 33, 36}},
+    {"c88", {28, 58, 62}}
 };
 
 } // namespace Constants

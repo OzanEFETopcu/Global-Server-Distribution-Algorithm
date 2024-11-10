@@ -9,9 +9,9 @@
             "stopAtEntry": false,
             "externalConsole": true,
             "cwd": "c:/Users/ozane/Downloads/Ongoing Courses/Thesis/Global-Server-Distribution-Algorithm",
-            "program": "c:/Users/ozane/Downloads/Ongoing Courses/Thesis/Global-Server-Distribution-Algorithm/build/Debug/outDebug",
+            "program": "c:/Users/ozane/Downloads/Ongoing Courses/Thesis/Global-Server-Distribution-Algorithm/optimizationAlgo/data/mqttTestApp/subscribe/mainReceiveCenter.cpp",
             "MIMode": "gdb",
-            "miDebuggerPath": "gdb",
+            "miDebuggerPath": "C:\\cygwin64\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",

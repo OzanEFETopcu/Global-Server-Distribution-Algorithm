@@ -49,7 +49,7 @@ void generateRequests(string regionName)
             randomPause = lowTrafficDis(gen);
         }
 
-        string payload = "Timestamp:" + to_string(elapsed) + "\tRegion: " + regionName + "=" + to_string(randomPause);
+        string payload = "Elapsed:" + to_string(elapsed) + "\tRegion: " + regionName + "=" + to_string(randomPause);
         cout << payload << endl;
         publishMessage(payload, *client, timeLeftMessagePointer);
 

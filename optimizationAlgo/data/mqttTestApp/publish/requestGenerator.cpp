@@ -45,6 +45,8 @@ void generateRequests(string regionName)
         }
         else
         {
+            publishMessage("END OF DAY", *client, timeLeftMessagePointer);
+            cout << "END OF DAY" << endl;
             start = chrono::steady_clock::now();
             randomPause = lowTrafficDis(gen);
         }

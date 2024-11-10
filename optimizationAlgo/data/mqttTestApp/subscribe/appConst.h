@@ -11,7 +11,7 @@
 namespace Constants {
 
 // Average cloud boot duration in seconds
-inline constexpr double averageCloudBootDuration = 11.381333;
+inline constexpr double averageServerBootDuration = 11.381333;
 
 // Memory and processor coefficients
 inline constexpr double memoryCoefficient = 2.5; // GB
@@ -33,7 +33,7 @@ inline int memoryReqCalculator(int totalProcessNum) {
 
 // Average regional service pricing in USD
 inline const std::map<std::string, float> oregonServerPricing = {
-    {"c8", 0.2859},
+    {"c08", 0.2859},
     {"c16", 0.5719},
     {"c32", 1.1437},
     {"c52", 1.8655},
@@ -41,7 +41,7 @@ inline const std::map<std::string, float> oregonServerPricing = {
 };
 
 inline const std::map<std::string, float> londonServerPricing = {
-    {"c8", 0.3547},
+    {"c08", 0.3547},
     {"c16", 0.7095},
     {"c32", 1.4190},
     {"c52", 2.3217},
@@ -49,11 +49,17 @@ inline const std::map<std::string, float> londonServerPricing = {
 };
 
 inline const std::map<std::string, float> singaporeServerPricing = {
-    {"c8", 0.3412},
+    {"c08", 0.3412},
     {"c16", 0.6824},
     {"c32", 1.3648},
     {"c52", 2.2316},
     {"c88", 3.8360},
+};
+
+inline const std::map<std::string, std::map<std::string, float>>  overallServerPricing = {
+    {"Oregon", oregonServerPricing},
+    {"London", oregonServerPricing},
+    {"Singapore", oregonServerPricing}
 };
 
 // Average inter/intra-regional service latency in milliseconds

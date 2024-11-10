@@ -34,6 +34,8 @@ public:
     int getTotalProcessNum();
     string getInstanceType();
     int serverStatus;
+    std::chrono::steady_clock::time_point start;
+    long elapsed;
 
 private:
     function<void(std::shared_ptr<Server> serverToChange, int requestedStatus)> serverStatusChangeSignalCallback;
@@ -52,12 +54,16 @@ public:
     void addServer(string instanceTypeInput);
     void removeServer();
     void changeServerType(std::shared_ptr<Server> serverToChange, int requestedType);
-
-    // Monitoring of algorithm changes
+    void calculateCostBenefitRatio();
+    void calculateServerCost(float runTime, string instanceType);
     void regionalReport();
 
 private:
-    std::shared_ptr<std::ofstream> file_ptr;
+    float totalServerCost;
+    float totalProcesses;
+    int totalNumOfScaling;
+    std::shared_ptr<std::ofstream> realTimeReportFile;
+    std::shared_ptr<std::ofstream> endOfDayReportFile;
     std::mutex serversMutex;
     // Servers that have # of processes between min and max thresholds
     vector<std::shared_ptr<Server>> serverStatus0;

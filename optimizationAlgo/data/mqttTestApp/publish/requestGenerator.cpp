@@ -50,6 +50,7 @@ void generateRequests(string regionName)
         }
 
         string payload = "Timestamp:" + to_string(elapsed) + "\tRegion: " + regionName + "=" + to_string(randomPause);
+        cout << payload << endl;
         publishMessage(payload, *client, timeLeftMessagePointer);
 
         // Pause the program for the random duration

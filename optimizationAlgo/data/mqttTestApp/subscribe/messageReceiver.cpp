@@ -3,7 +3,9 @@
 #include <vector>  // vectors.
 #include <thread>  // threads.
 #include <functional>
+#include <sstream>
 #include <future>
+#include <chrono>
 #include <mutex>
 #include "mqttSubscribeMessage.h"
 #include "messageReceiver.h"
@@ -16,7 +18,8 @@ using namespace Constants;
 RegionalAlgo::RegionalAlgo(string regionNameInput)
 {
     regionName = regionNameInput;
-    file_ptr = std::make_shared<std::ofstream>(regionName + "_log", std::ios::app);
+    realTimeReportFile = std::make_shared<std::ofstream>(regionName + "_realTime_log", std::ios::trunc);
+    endOfDayReportFile = std::make_shared<std::ofstream>(regionName + "_endOfDay_log", std::ios::trunc);
 };
 
 // Continuously listening to requests coming from outside and handling the requests
@@ -42,6 +45,11 @@ void RegionalAlgo::messageReceiver()
 
             std::future<void> ft = std::async(std::launch::async, [this]()
                                               { addProcessToServer(); });
+
+            if (messageString == "END OF DAY")
+            {
+                calculateCostBenefitRatio();
+            }
 
             // Perform processing on the string.
             // This is where message processing can be passed onto different
@@ -81,6 +89,7 @@ void RegionalAlgo::addProcessToServer()
             auto newServer = std::make_shared<Server>("c08", [this](std::shared_ptr<Server> serverToChange, int requestedStatus)
                                                       { changeServerType(serverToChange, requestedStatus); });
             serverStatus1.insert(serverStatus1.begin(), newServer);
+            ++totalNumOfScaling;
             targetServer = newServer;
         }
     } // serversMutex is released here
@@ -90,6 +99,7 @@ void RegionalAlgo::addProcessToServer()
     {
         targetServer->launchProcess(Constants::averageApplicationExecutionDuration);
         cout << "PROCESS ADDED\n";
+        ++totalProcesses;
         // Print out the current server load of the region
         regionalReport();
     }
@@ -98,6 +108,7 @@ void RegionalAlgo::addProcessToServer()
 // Adding a new server to the server pool of serverType1 since there is no processes in that server
 void RegionalAlgo::addServer(string instanceTypeInput)
 {
+    ++totalNumOfScaling;
     auto server = std::make_shared<Server>(instanceTypeInput, [this](std::shared_ptr<Server> serverToChange, int requestedStatus)
                                            { changeServerType(serverToChange, requestedStatus); });
     serverStatus1.insert(serverStatus1.begin(), server);
@@ -142,6 +153,7 @@ void RegionalAlgo::changeServerType(std::shared_ptr<Server> serverToChange, int 
             removeServerFromVector(serverStatus2);
             removeServerFromVector(serverStatus3);
             cout << "SERVER CLOSED\n";
+            calculateServerCost(serverToChange->elapsed, serverToChange->getInstanceType());
             regionalReport();
         }
         if (requestedStatus == 0)
@@ -193,8 +205,6 @@ void RegionalAlgo::changeServerType(std::shared_ptr<Server> serverToChange, int 
     }
 };
 
-#include <sstream> // Include this for stringstream
-
 void RegionalAlgo::regionalReport()
 {
     // Use a stringstream to construct the message
@@ -213,7 +223,7 @@ void RegionalAlgo::regionalReport()
     if (!serverStatus0.empty())
     {
         reportStream << "Individual Server Type 0 Process Numbers:\n";
-        for (const auto& server : serverStatus0)
+        for (const auto &server : serverStatus0)
         {
             reportStream << server->getInstanceType() << ":" << server->getTotalProcessNum() << "/";
         }
@@ -222,7 +232,7 @@ void RegionalAlgo::regionalReport()
     if (!serverStatus1.empty())
     {
         reportStream << "Individual Server Type 1 Process Numbers:\n";
-        for (const auto& server : serverStatus1)
+        for (const auto &server : serverStatus1)
         {
             reportStream << server->getInstanceType() << ":" << server->getTotalProcessNum() << "/";
         }
@@ -231,7 +241,7 @@ void RegionalAlgo::regionalReport()
     if (!serverStatus2.empty())
     {
         reportStream << "Individual Server Type 2 Process Numbers:\n";
-        for (const auto& server : serverStatus2)
+        for (const auto &server : serverStatus2)
         {
             reportStream << server->getInstanceType() << ":" << server->getTotalProcessNum() << "/";
         }
@@ -240,7 +250,7 @@ void RegionalAlgo::regionalReport()
     if (!serverStatus3.empty())
     {
         reportStream << "Individual Server Type 3 Process Numbers:\n";
-        for (const auto& server : serverStatus3)
+        for (const auto &server : serverStatus3)
         {
             reportStream << server->getInstanceType() << ":" << server->getTotalProcessNum() << "/";
         }
@@ -253,11 +263,51 @@ void RegionalAlgo::regionalReport()
     std::cout << reportStream.str();
 
     // Output to file if it's open
-    if (file_ptr->is_open())
+    if (realTimeReportFile->is_open())
     {
-        *file_ptr << reportStream.str();
-        file_ptr->flush(); // Ensure the data is written to the file
+        *realTimeReportFile << reportStream.str();
+        realTimeReportFile->flush(); // Ensure the data is written to the file
     }
+}
+
+void RegionalAlgo::calculateServerCost(float runTime, string instanceType)
+{
+    // The server pricing is USD/hour thats why we first find the server runTime in seconds
+    // for real life than convert that time to hours and finally multiply with how much that
+    // server costs in the region
+    float realLifeRunTime = (runTime * 200) / 3600;
+    totalServerCost += realLifeRunTime * Constants::overallServerPricing.find(regionName)->second.find(instanceType)->second;
+}
+
+void RegionalAlgo::calculateCostBenefitRatio()
+{
+    // Even tough the server boot might not always be an issue
+    // in order to discourage the unnecesarry scale up, in the calculation
+    // it is taken as one of the cost factors
+
+    // Use a stringstream to construct the message
+    std::stringstream reportStream;
+
+    // Add to both the reportStream and console output
+    reportStream << "-------END OF DAY REPORT-------\n";
+    reportStream << "Total proccesses that was sent to the server network: " << totalProcesses << endl;
+    reportStream << "Total cost to run the server network: " << totalServerCost << "$" << endl;
+    reportStream << "Overall time spent on server holdup between scaling and initial boots: " << totalNumOfScaling * Constants::averageServerBootDuration << " seconds"<< endl;
+    reportStream << "Maximum vertical availability of the infrastructure: " << Constants::processCapacityPerInstanceType.at("c88").absoluteLimit << endl;
+    reportStream << "-------END OF DAY REPORT-------\n";
+
+    // Output to console
+    std::cout << reportStream.str();
+
+    // Output to file if it's open
+    if (endOfDayReportFile->is_open())
+    {
+        *endOfDayReportFile << reportStream.str();
+        endOfDayReportFile->flush(); // Ensure the data is written to the file
+    }
+    totalNumOfScaling = 0;
+    totalProcesses = 0;
+    totalServerCost = 0;
 }
 
 //////////////////
@@ -319,6 +369,7 @@ Server::Server(string instanceTypeInput, function<void(std::shared_ptr<Server> s
     serverStatusChangeSignalCallback = serverStatusChangeSignal;
     instanceType = instanceTypeInput;
     serverStatus = 1;
+    start = chrono::steady_clock::now();
 };
 
 // Adds new processes to the server
@@ -338,8 +389,11 @@ void Server::changeStatus()
     {
         if (serverStatusChangeSignalCallback)
         {
+            auto now = chrono::steady_clock::now();
+            elapsed = chrono::duration_cast<chrono::seconds>(now - start).count();
             auto self = shared_from_this();             // Keep Process alive during callback
             serverStatusChangeSignalCallback(self, -1); // Use the local copy
+            serverStatus = -1;
         }
     }
     else if (activeProcesses.size() <= Constants::processCapacityPerInstanceType.at(instanceType).minThreshold)

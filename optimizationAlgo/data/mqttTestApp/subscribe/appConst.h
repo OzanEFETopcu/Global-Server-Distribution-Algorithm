@@ -62,27 +62,6 @@ inline const std::map<std::string, std::map<std::string, float>>  overallServerP
     {"Singapore", oregonServerPricing}
 };
 
-// Average inter/intra-regional service latency in milliseconds
-inline const std::map<std::string, float> oregonToDest = {
-    {"oregon", 20},
-    {"singapore", 380},
-    {"london", 260},
-};
-
-inline const std::map<std::string, float> singaporeToDest = {
-    {"oregon", 370},
-    {"singapore", 1},
-    {"london", 400},
-};
-
-inline const std::map<std::string, float> londonToDest = {
-    {"oregon", 320},
-    {"singapore", 320},
-    {"london", 1},
-};
-
-
-
 struct Capacity {
     int minThreshold;
     int maxThreshold;

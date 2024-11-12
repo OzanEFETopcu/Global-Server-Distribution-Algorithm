@@ -1,0 +1,21 @@
+@startuml
+participant RegionalAlgo order 10
+participant Server order 20
+participant Process order 30
+...
+skinparam sequenceMessageAlign center
+==Initialization of Algorithm==
+[-> RegionalAlgo
+activate RegionalAlgo #028b02
+==Repeated Each Request==
+[-> RegionalAlgo
+RegionalAlgo -> Server : addServer()
+activate Server #028b02
+Server -> Process : launchProcess()
+activate Process #028b02
+Process -> Process: run()
+Process -> Server : onComplete()
+Server -> Process : removeProcess()
+deactivate Process
+return changeStatus()
+@enduml

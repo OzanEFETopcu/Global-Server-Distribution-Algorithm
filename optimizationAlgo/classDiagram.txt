@@ -1,0 +1,59 @@
+@startuml
+skinparam classAttributeIconSize 0
+class RegionalAlgo{
+RegionalAlgo()
+string regionName
+void messageReceiver()
+void addProcessToServer()
+void addServer()
+void removeServer()
+void changeServerType()
+void calculateCostBenefitRatio()
+void calculateServerCost()
+void regionalReport()
+float totalServerCost;
+float totalProcesses;
+int totalNumOfScaling;
+std::shared_ptr<std::ofstream> realTimeReportFile;
+std::shared_ptr<std::ofstream> endOfDayReportFile;
+std::mutex serversMutex;
+vector<std::shared_ptr<Server>> serverStatus0;
+vector<std::shared_ptr<Server>> serverStatus1;
+vector<std::shared_ptr<Server>> serverStatus2;
+vector<std::shared_ptr<Server>> serverStatus3;
+}
+
+
+
+class Server{
+Server()
+void launchProcess()
+void removeProcess()
+void changeStatus()
+int getTotalProcessNum()
+string getInstanceType()
+function<void(std::shared_ptr<Server> serverToChange, int requestedStatus)> serverStatusChangeSignalCallback
+int serverStatus
+std::chrono::steady_clock::time_point start
+std::mutex processesMutex
+string instanceType
+vector<std::shared_ptr<Process>> activeProcesses
+}
+
+
+class Process{
+Process()
+~Process()
+function<void(std::shared_ptr<Process> completedProcess)> onCompleteCallback
+void start()
+void start()
+processThread : thread
+executionTime : int
+mutex_ : std::mutex
+callbackMutex_ : std::mutex
+}
+
+
+RegionalAlgo "1" *-- "many" Server: contains
+Server "1" *-- "many" Process: contains
+@enduml

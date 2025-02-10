@@ -65,59 +65,9 @@ Total Number of Server Type 2: 1
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 1 Process Numbers:
-c16:1/
+c16:0/
 Individual Server Type 2 Process Numbers:
 c08:4/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c08:3/
-Individual Server Type 1 Process Numbers:
-c16:1/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c08:3/
-Individual Server Type 1 Process Numbers:
-c16:1/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c16:1/
-Individual Server Type 2 Process Numbers:
-c08:4/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c08:3/
 ---------------------------
 
 Infrastructure update:
@@ -154,7 +104,7 @@ Total Number of Server Type 2: 1
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 1 Process Numbers:
-c16:2/
+c16:1/
 Individual Server Type 2 Process Numbers:
 c08:4/
 ---------------------------
@@ -167,7 +117,20 @@ Total Number of Server Type 2: 1
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 1 Process Numbers:
-c16:3/
+c16:1/
+Individual Server Type 2 Process Numbers:
+c08:4/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 1
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c16:2/
 Individual Server Type 2 Process Numbers:
 c08:4/
 ---------------------------
@@ -258,9 +221,22 @@ Total Number of Server Type 2: 2
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 1 Process Numbers:
+c32:0/
+Individual Server Type 2 Process Numbers:
+c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 2
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
 c32:1/
 Individual Server Type 2 Process Numbers:
-c16:8/c08:4/
+c08:4/c16:8/
 ---------------------------
 
 Infrastructure update:
@@ -273,20 +249,7 @@ Total Number of Server Type 3: 0
 Individual Server Type 1 Process Numbers:
 c32:2/
 Individual Server Type 2 Process Numbers:
-c16:8/c08:4/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/
+c08:4/c16:8/
 ---------------------------
 
 Infrastructure update:
@@ -344,12 +307,29 @@ c08:4/c16:8/
 Infrastructure update:
 ---------------------------
 Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 2
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c32:6/
+Individual Server Type 1 Process Numbers:
+c16:0/
+Individual Server Type 2 Process Numbers:
+c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
 Total Number of Server Type 2: 2
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 0 Process Numbers:
 c32:7/
+Individual Server Type 1 Process Numbers:
+c16:0/
 Individual Server Type 2 Process Numbers:
 c08:4/c16:8/
 ---------------------------
@@ -357,12 +337,14 @@ c08:4/c16:8/
 Infrastructure update:
 ---------------------------
 Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
+Total Number of Server Type 1: 1
 Total Number of Server Type 2: 2
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 0 Process Numbers:
 c32:8/
+Individual Server Type 1 Process Numbers:
+c16:0/
 Individual Server Type 2 Process Numbers:
 c08:4/c16:8/
 ---------------------------
@@ -370,12 +352,14 @@ c08:4/c16:8/
 Infrastructure update:
 ---------------------------
 Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
+Total Number of Server Type 1: 1
 Total Number of Server Type 2: 2
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 0 Process Numbers:
 c32:9/
+Individual Server Type 1 Process Numbers:
+c16:0/
 Individual Server Type 2 Process Numbers:
 c08:4/c16:8/
 ---------------------------
@@ -383,12 +367,14 @@ c08:4/c16:8/
 Infrastructure update:
 ---------------------------
 Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
+Total Number of Server Type 1: 1
 Total Number of Server Type 2: 2
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 0 Process Numbers:
 c32:10/
+Individual Server Type 1 Process Numbers:
+c16:0/
 Individual Server Type 2 Process Numbers:
 c08:4/c16:8/
 ---------------------------
@@ -396,25 +382,14 @@ c08:4/c16:8/
 Infrastructure update:
 ---------------------------
 Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
+Total Number of Server Type 1: 1
 Total Number of Server Type 2: 2
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 0 Process Numbers:
 c32:11/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:12/
+Individual Server Type 1 Process Numbers:
+c16:0/
 Individual Server Type 2 Process Numbers:
 c08:4/c16:8/
 ---------------------------
@@ -432,6 +407,21 @@ Individual Server Type 1 Process Numbers:
 c16:0/
 Individual Server Type 2 Process Numbers:
 c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 2
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c32:12/
+Individual Server Type 1 Process Numbers:
+c16:0/
+Individual Server Type 2 Process Numbers:
+c16:8/c08:4/
 ---------------------------
 
 Infrastructure update:
@@ -446,7 +436,7 @@ c32:13/
 Individual Server Type 1 Process Numbers:
 c16:0/
 Individual Server Type 2 Process Numbers:
-c08:4/c16:8/
+c16:8/c08:4/
 ---------------------------
 
 Infrastructure update:
@@ -461,7 +451,7 @@ c32:14/
 Individual Server Type 1 Process Numbers:
 c16:0/
 Individual Server Type 2 Process Numbers:
-c08:4/c16:8/
+c16:8/c08:4/
 ---------------------------
 
 Infrastructure update:
@@ -476,7 +466,7 @@ c32:15/
 Individual Server Type 1 Process Numbers:
 c16:0/
 Individual Server Type 2 Process Numbers:
-c08:4/c16:8/
+c16:8/c08:4/
 ---------------------------
 
 Infrastructure update:
@@ -491,7 +481,7 @@ c32:16/
 Individual Server Type 1 Process Numbers:
 c16:0/
 Individual Server Type 2 Process Numbers:
-c08:4/c16:8/
+c16:8/c08:4/
 ---------------------------
 
 Infrastructure update:
@@ -506,7 +496,7 @@ c32:17/
 Individual Server Type 1 Process Numbers:
 c16:0/
 Individual Server Type 2 Process Numbers:
-c08:4/c16:8/
+c16:8/c08:4/
 ---------------------------
 
 Infrastructure update:
@@ -521,7 +511,22 @@ c32:18/
 Individual Server Type 1 Process Numbers:
 c16:0/
 Individual Server Type 2 Process Numbers:
-c08:4/c16:8/
+c16:8/c08:4/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 2
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c32:19/
+Individual Server Type 1 Process Numbers:
+c16:0/
+Individual Server Type 2 Process Numbers:
+c16:8/c08:4/
 ---------------------------
 
 Infrastructure update:
@@ -563,19 +568,6 @@ Individual Server Type 1 Process Numbers:
 c16:1/
 Individual Server Type 2 Process Numbers:
 c32:20/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c16:1/
-Individual Server Type 2 Process Numbers:
-c08:4/c32:20/c16:8/
 ---------------------------
 
 Infrastructure update:
@@ -588,7 +580,7 @@ Total Number of Server Type 3: 0
 Individual Server Type 1 Process Numbers:
 c16:2/
 Individual Server Type 2 Process Numbers:
-c08:4/c32:20/c16:8/
+c32:20/c08:4/c16:8/
 ---------------------------
 
 Infrastructure update:
@@ -601,7 +593,7 @@ Total Number of Server Type 3: 0
 Individual Server Type 1 Process Numbers:
 c16:3/
 Individual Server Type 2 Process Numbers:
-c08:4/c32:20/c16:8/
+c32:20/c08:4/c16:8/
 ---------------------------
 
 Infrastructure update:
@@ -614,7 +606,7 @@ Total Number of Server Type 3: 0
 Individual Server Type 0 Process Numbers:
 c16:4/
 Individual Server Type 2 Process Numbers:
-c08:4/c32:20/c16:8/
+c32:20/c08:4/c16:8/
 ---------------------------
 
 Infrastructure update:
@@ -627,7 +619,7 @@ Total Number of Server Type 3: 0
 Individual Server Type 0 Process Numbers:
 c16:5/
 Individual Server Type 2 Process Numbers:
-c08:4/c32:20/c16:8/
+c32:20/c08:4/c16:8/
 ---------------------------
 
 Infrastructure update:
@@ -640,7 +632,7 @@ Total Number of Server Type 3: 0
 Individual Server Type 0 Process Numbers:
 c16:6/
 Individual Server Type 2 Process Numbers:
-c08:4/c32:20/c16:8/
+c32:20/c08:4/c16:8/
 ---------------------------
 
 Infrastructure update:
@@ -653,7 +645,7 @@ Total Number of Server Type 3: 0
 Individual Server Type 0 Process Numbers:
 c16:7/
 Individual Server Type 2 Process Numbers:
-c08:4/c32:20/c16:8/
+c32:20/c08:4/c16:8/
 ---------------------------
 
 Infrastructure update:
@@ -666,7 +658,7 @@ Total Number of Server Type 3: 0
 Individual Server Type 1 Process Numbers:
 c32:0/
 Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c32:20/c16:8/
+c16:8/c32:20/c08:4/c16:8/
 ---------------------------
 
 Infrastructure update:
@@ -679,7 +671,7 @@ Total Number of Server Type 3: 0
 Individual Server Type 1 Process Numbers:
 c32:1/
 Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c32:20/c16:8/
+c16:8/c32:20/c08:4/c16:8/
 ---------------------------
 
 Infrastructure update:
@@ -692,7 +684,7 @@ Total Number of Server Type 3: 0
 Individual Server Type 1 Process Numbers:
 c32:1/
 Individual Server Type 2 Process Numbers:
-c16:8/c16:8/c08:4/c32:20/
+c08:4/c16:8/c32:20/c16:8/
 ---------------------------
 
 Infrastructure update:
@@ -703,48 +695,9 @@ Total Number of Server Type 2: 4
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 1 Process Numbers:
-c32:1/
+c32:2/
 Individual Server Type 2 Process Numbers:
-c16:8/c16:8/c08:4/c32:20/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 4
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:1/
-Individual Server Type 2 Process Numbers:
-c16:8/c16:8/c08:4/c32:20/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 4
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:1/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/c16:8/c32:20/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 4
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:1/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/c32:20/
+c08:4/c16:8/c32:20/c16:8/
 ---------------------------
 
 Infrastructure update:
@@ -762,6 +715,411 @@ c16:8/c08:4/c16:8/c32:20/
 
 Infrastructure update:
 ---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c08:4/c16:8/c32:20/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c08:4/c16:8/c32:20/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c08:4/c16:8/c32:20/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:6/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c08:4/c16:8/c32:20/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:6/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c08:4/c16:8/c32:20/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:6/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:6/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 2
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 2
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c32:19/c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 2
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 2
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c32:19/c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c08:4/c32:20/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:6/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:6/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:6/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:6/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:6/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:6/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
 Total Number of Server Type 0: 0
 Total Number of Server Type 1: 1
 Total Number of Server Type 2: 4
@@ -770,7 +1128,22 @@ Total Number of Server Type 3: 0
 Individual Server Type 1 Process Numbers:
 c32:2/
 Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/c32:20/
+c16:8/c32:20/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c08:3/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c32:20/c16:8/c16:8/
 ---------------------------
 
 Infrastructure update:
@@ -782,97 +1155,6 @@ Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 1 Process Numbers:
 c32:2/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/c32:20/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 4
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:2/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/c32:20/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 4
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:2/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/c32:20/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 4
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:2/
-Individual Server Type 2 Process Numbers:
-c32:20/c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 4
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c32:20/c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 4
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c32:20/c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 4
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c32:20/c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 4
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:3/
 Individual Server Type 2 Process Numbers:
 c08:4/c32:20/c16:8/c16:8/
 ---------------------------
@@ -885,9 +1167,234 @@ Total Number of Server Type 2: 4
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c16:8/c08:4/c32:20/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c16:8/c08:4/c32:20/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c16:8/c08:4/c32:20/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c08:4/c32:20/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c16:8/c08:4/c32:20/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c16:8/c08:4/c32:20/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 3
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:7/
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c08:4/c32:20/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c16:8/c08:4/c32:20/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c16:8/c08:4/c32:20/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c08:4/c16:8/c32:20/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c08:4/c16:8/c32:20/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c16:8/c08:4/c16:8/c32:20/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c16:8/c08:4/c16:8/c32:20/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c16:8/c08:4/c16:8/c32:20/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c32:2/
+Individual Server Type 2 Process Numbers:
+c16:8/c08:4/c16:8/c32:20/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
 c32:3/
 Individual Server Type 2 Process Numbers:
-c32:20/c08:4/c16:8/c16:8/
+c16:8/c08:4/c16:8/c32:20/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c32:3/
+Individual Server Type 2 Process Numbers:
+c16:8/c08:4/c16:8/c32:20/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c32:3/
+Individual Server Type 2 Process Numbers:
+c08:4/c16:8/c16:8/c32:20/
 ---------------------------
 
 Infrastructure update:
@@ -905,32 +1412,6 @@ c32:20/c08:4/c16:8/c16:8/
 
 Infrastructure update:
 ---------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 4
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c32:20/c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 4
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c32:20/c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
 Total Number of Server Type 0: 1
 Total Number of Server Type 1: 1
 Total Number of Server Type 2: 3
@@ -940,482 +1421,6 @@ Individual Server Type 0 Process Numbers:
 c32:19/
 Individual Server Type 1 Process Numbers:
 c32:3/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:19/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:19/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:19/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:19/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:19/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:19/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:19/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:19/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 2
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:7/c32:18/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 2
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:7/c32:18/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:3/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:2/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:2/
-Individual Server Type 2 Process Numbers:
-c16:8/c16:8/c08:4/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:2/
-Individual Server Type 2 Process Numbers:
-c16:8/c16:8/c08:4/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:2/
-Individual Server Type 2 Process Numbers:
-c16:8/c16:8/c08:4/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:2/
-Individual Server Type 2 Process Numbers:
-c08:4/c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:2/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 1 Process Numbers:
-c32:1/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:19/
-Individual Server Type 1 Process Numbers:
-c32:1/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:19/
-Individual Server Type 1 Process Numbers:
-c32:1/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:19/
-Individual Server Type 1 Process Numbers:
-c32:1/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:19/
-Individual Server Type 1 Process Numbers:
-c32:1/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:18/
-Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
-Total Number of Server Type 2: 3
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:19/
 Individual Server Type 2 Process Numbers:
 c16:8/c08:4/c16:8/
 ---------------------------
@@ -1428,7 +1433,20 @@ Total Number of Server Type 2: 4
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 1 Process Numbers:
-c52:0/
+c32:3/
+Individual Server Type 2 Process Numbers:
+c32:20/c16:8/c08:4/c16:8/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 4
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c32:3/
 Individual Server Type 2 Process Numbers:
 c32:20/c16:8/c08:4/c16:8/
 ---------------------------
@@ -1441,1648 +1459,166 @@ Total Number of Server Type 2: 3
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 0 Process Numbers:
-c32:19/
+c32:11/
 Individual Server Type 1 Process Numbers:
-c52:0/
+c32:3/
 Individual Server Type 2 Process Numbers:
-c16:8/c08:4/c16:8/
+c08:4/c16:8/c16:8/
 ---------------------------
 
 Infrastructure update:
 ---------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 2
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c32:9/
-Individual Server Type 1 Process Numbers:
-c08:2/c52:0/
-Individual Server Type 2 Process Numbers:
-c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 3
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:5/c08:1/c52:0/
-Individual Server Type 2 Process Numbers:
-c16:8/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 4
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c16:1/c32:5/c08:1/c52:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 3
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:6/
-Individual Server Type 1 Process Numbers:
-c16:1/c32:5/c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 4
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c16:2/c16:1/c32:1/c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 4
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c16:3/c16:1/c32:1/c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 3
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c16:3/c16:1/c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
+Total Number of Server Type 0: 3
 Total Number of Server Type 1: 2
 Total Number of Server Type 2: 0
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 0 Process Numbers:
-c16:4/
+c16:5/c08:3/c16:6/
 Individual Server Type 1 Process Numbers:
-c16:1/c52:0/
+c32:3/c32:3/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 4
+Total Number of Server Type 2: 0
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c16:2/c08:2/c16:1/c32:3/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 4
+Total Number of Server Type 2: 0
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c16:3/c08:2/c16:1/c32:3/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 3
+Total Number of Server Type 2: 0
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c16:1/c08:1/c16:1/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 3
+Total Number of Server Type 2: 0
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c16:2/c08:1/c16:1/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 2
+Total Number of Server Type 2: 0
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c16:2/c16:1/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 2
+Total Number of Server Type 2: 0
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c16:3/c16:1/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 0
+Total Number of Server Type 1: 1
+Total Number of Server Type 2: 0
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 1 Process Numbers:
+c16:3/
 ---------------------------
 
 Infrastructure update:
 ---------------------------
 Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
+Total Number of Server Type 1: 0
 Total Number of Server Type 2: 0
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 0 Process Numbers:
 c16:4/
-Individual Server Type 1 Process Numbers:
-c52:0/
 ---------------------------
 
 Infrastructure update:
 ---------------------------
 Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
+Total Number of Server Type 1: 0
 Total Number of Server Type 2: 0
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 0 Process Numbers:
 c16:4/
-Individual Server Type 1 Process Numbers:
-c52:0/
 ---------------------------
 
 Infrastructure update:
 ---------------------------
 Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
+Total Number of Server Type 1: 0
+Total Number of Server Type 2: 0
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:4/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 0
+Total Number of Server Type 2: 0
+Total Number of Server Type 3: 0
+---------------------------
+Individual Server Type 0 Process Numbers:
+c16:4/
+---------------------------
+
+Infrastructure update:
+---------------------------
+Total Number of Server Type 0: 1
+Total Number of Server Type 1: 0
 Total Number of Server Type 2: 0
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 0 Process Numbers:
 c16:5/
-Individual Server Type 1 Process Numbers:
-c52:0/
 ---------------------------
 
 Infrastructure update:
 ---------------------------
 Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:4/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:4/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
+Total Number of Server Type 1: 0
 Total Number of Server Type 2: 0
 Total Number of Server Type 3: 0
 ---------------------------
 Individual Server Type 0 Process Numbers:
 c16:5/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:5/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:5/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:5/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:4/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:4/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:4/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:4/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:4/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:4/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:5/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:6/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:7/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 0
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c16:7/
-Individual Server Type 1 Process Numbers:
-c52:0/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:1/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:2/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:3/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:4/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:5/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:6/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:7/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:8/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:9/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:10/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:10/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:11/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:12/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:13/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:14/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c52:15/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:16/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:17/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:18/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:19/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:20/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:21/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 0
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:22/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:22/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:23/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:24/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:25/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:26/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:27/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:28/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:29/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:30/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:31/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:32/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/c52:34/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/c52:34/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/c52:34/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/c52:34/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/c52:34/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/c52:34/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 0
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 2
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c52:34/c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:33/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:26/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
----------------------------
-
-Infrastructure update:
----------------------------
-Total Number of Server Type 0: 1
-Total Number of Server Type 1: 1
-Total Number of Server Type 2: 1
-Total Number of Server Type 3: 0
----------------------------
-Individual Server Type 0 Process Numbers:
-c52:16/
-Individual Server Type 1 Process Numbers:
-c32:0/
-Individual Server Type 2 Process Numbers:
-c16:8/
 ---------------------------
 

@@ -1,6 +1,12 @@
 -------END OF DAY REPORT-------
+<<<<<<< HEAD
 Total proccesses that was sent to the server network: 118
 Total cost to run the server network: 32.1829$
 Overall time spent on server holdup between scaling and initial boots: 79.6693 seconds
+=======
+Total proccesses that was sent to the server network: 116
+Total cost to run the server network: 27.4496$
+Overall time spent on server holdup between scaling and initial boots: 68.288 seconds
+>>>>>>> ef60a71 (added uml text)
 Maximum vertical availability of the infrastructure: 62
 -------END OF DAY REPORT-------
